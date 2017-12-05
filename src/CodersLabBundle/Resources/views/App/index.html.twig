@@ -1,19 +1,5 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-</head>
-<body>
-    {% for person in people %}
-        <h2>{{ person.name }} {{ person.surname }}</h2>
-        <p>{{ person.description }}</p>
-        <ul>
-            {% for phone in person.phones %}
-                <li>{{ phone.typ }}: {{ phone.number }}</li>
-            {% endfor %}
-        </ul>
-        <br><hr/><br>
-    {% endfor %}
-</body>
-</html>
+{% if is_granted('ROLE_USER') %}
+    {{  app.user.username }}
+{% else %}
+    //Przyciski itp
+{% endif %}

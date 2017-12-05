@@ -27,4 +27,14 @@ class AppController extends Controller
             'people' => $people,
         ];
     }
+
+    /**
+     * This will check if User is logged in.
+     * @param $user User User object to check
+     * @param $throw boolean If troue this will throw Error
+     * @return boolean True if authentitaced, false otherwise
+     */
+    private function checkIfUserAuthenticated($user, $throw) {
+        //...
+    }
 }
